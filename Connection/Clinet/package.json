@@ -1,0 +1,17 @@
+{
+  "name": "clinet",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "parcel": "^2.15.4"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3"
+  }
+}

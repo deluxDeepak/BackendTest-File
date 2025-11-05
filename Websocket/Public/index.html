@@ -1,0 +1,39 @@
+<input id="roomInput" placeholder="Room name">
+<button onclick="joinRoom()">Join Room</button>
+
+
+
+<input id="msgInput" placeholder="Message">
+<button onclick="sendMsg()">Send</button>
+
+<!-- Show the mesasge in output  -->
+<ul id="messages"></ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io("http://localhost:3000");
+
+  function joinRoom() {
+    const room = document.getElementById("roomInput").value;
+
+    // Join room ka event ko hit karega aur join ho jayega 
+    socket.emit("joinRoom", room);
+  }
+
+  function sendMsg() {
+    const room = document.getElementById("roomInput").value;
+    const msg = document.getElementById("msgInput").value;
+    socket.emit("chatMessage", { room, msg });
+  }
+
+  socket.on("message", (msg) => {
+    const li = document.createElement("li");
+    li.textContent = msg;
+    document.getElementById("messages").appendChild(li);
+  });
+
+  socket.on("connect",()=>{
+    console.log("Connected with socket id: ",socket.id)
+
+  })
+</script>

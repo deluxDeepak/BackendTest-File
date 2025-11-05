@@ -1,0 +1,16 @@
+{
+  "name": "multer",
+  "version": "1.0.0",
+  "main": "01_intro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cloudinary": "^2.7.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  }
+}

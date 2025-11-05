@@ -1,0 +1,56 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+</head>
+<body>
+  <h2>Chat App</h2>
+  <ul id="messages"></ul>
+  <input id="msgInput" autocomplete="off" placeholder="Type a message..." />
+  <button onclick="sendMessage()">Send</button>
+
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+    // Connect to the Socket.io server (Jo backed ka port hai wahi yehan rehaga )
+    const socket = io('http://localhost:3000');
+    console.log(socket); //Ye browser me display hoga 
+
+    // Handle incoming chat messages from server
+    // chat message=>yehi same server pe rehna chiye name 
+    // On matlab server se mesg receive karna 
+    socket.on('chat message', (msg) => {
+      const item = document.createElement('li');
+      item.textContent = msg;
+      document.getElementById('messages').appendChild(item);
+    });
+
+    // Send message to server
+    function sendMessage() {
+      const input = document.getElementById('msgInput');
+      const msg = input.value;  //Value store karega ki yehan kya likha hai 
+      if (msg.trim() !== '') {
+
+        // Send message to server
+        socket.emit('chat message', msg);  
+        input.value = ''; // clear input box
+      }
+    }
+
+    // Ye log client ko show karega (ye client side pe show karega ki ye connected hai ya nahi )
+    socket.on('connect', () => {
+      console.log("🟢 Connected to server, socket id:", socket.id);
+
+    });
+
+    // Refresh karne ke baad disconnect karega 
+    socket.on('disconnect', () => {
+      console.log("🔴 Disconnected from server");
+    });
+  </script>
+</body>
+</html>
+
+
