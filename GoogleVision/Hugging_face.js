@@ -1,13 +1,10 @@
-// HUGGING_FACE_TOKEN_REMOVED
-
-// HUGGING_FACE_TOKEN_REMOVED
-
-
+// Replace with your Hugging Face API token
+// Get your token from: https://huggingface.co/settings/tokens
 
 // import fs from "fs";
 // import fetch from "node-fetch";
 
-// const API_TOKEN = "HUGGING_FACE_TOKEN_REMOVED"; // Hugging Face API token
+// const API_TOKEN = process.env.HUGGING_FACE_TOKEN; // Hugging Face API token
 // const MODEL = "microsoft/VibeVoice-1.5b";  // Model name
 // const TEXT = "नमस्ते, यह VibeVoice मॉडल का टेस्ट है।";
 
@@ -40,7 +37,7 @@
 import fs from "fs";
 import fetch from "node-fetch";
 
-const API_TOKEN = "HUGGING_FACE_TOKEN_REMOVED";
+const API_TOKEN = process.env.HUGGING_FACE_TOKEN; // Use environment variable
 const MODEL = "espnet/kan-bayashi_ljspeech_vits";
 const TEXT = "Hello Deepak, this is a TTS test.";
 
