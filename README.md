@@ -74,7 +74,7 @@ This repository contains multiple independent projects and examples demonstratin
   - PDF parsing
   - Speech-to-text functionality
 
-- **`Claudinary/`** - Cloudinary integration for file uploads
+- **`Claudinary/`** - Cloudinary integration for file uploads (Note: directory name is misspelled)
 
 ### Data & Authentication
 
@@ -87,7 +87,7 @@ This repository contains multiple independent projects and examples demonstratin
   - Client-server setup
   - MongoDB connectivity
 
-- **`Rfresh token/`** - Refresh token implementation
+- **`Rfresh token/`** - Refresh token implementation (Note: directory name is misspelled)
   - JWT authentication
   - Token refresh mechanism
 
