@@ -48,7 +48,7 @@ async function synthesize() {
             "Authorization": `Bearer ${API_TOKEN}`,
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
             inputs: TEXT,
             options: { use_cache: false, wait_for_model: true }
         })
