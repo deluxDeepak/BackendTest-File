@@ -13,6 +13,19 @@ yarn.lock
 .env.test.local
 .env.production.local
 
+# Google Cloud / Firebase / API Keys
+**/keyGoogle.json
+**/serviceAccountKey.json
+**/serviceAccountkey.json
+google-credentials.json
+firebase-adminsdk-*.json
+gcp-credentials.json
+credentials.json
+
+# AWS Credentials
+.aws/
+aws-credentials.json
+
 # SSL/TLS Certificates (Development)
 *.key
 *.crt
