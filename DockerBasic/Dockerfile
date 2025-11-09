@@ -23,8 +23,9 @@ COPY . .
 RUN npm run build
 
 # Step 7: Expose port 4173 (Vite preview server)
-# Why: Allows external access to the application running inside container
+# Is port ko expose kar rehe hai ki docker yhena se port le sake 
 EXPOSE 4173
+
 
 # Step 8: Start the preview server
 # Why: Serves the built application on port 4173

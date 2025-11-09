@@ -85,7 +85,7 @@ rm 'Backend/serviceAccountkey.json'
 
 **Before:**
 ```javascript
-const API_TOKEN = "hf_XXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+const API_TOKEN = "hf_XXXXXXXXXXXXXXXXXXXXXXXXXXXXX";  // Replace with actual token
 ```
 
 **After:**
